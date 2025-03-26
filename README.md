@@ -25,7 +25,7 @@ clone this repo, enter directory, and run `npm install` for dev dependencies, th
 [See unit tests for more usage examples](https://github.com/opsimathically/whatis/blob/main/test/whatis.test.ts)
 
 ```typescript
-import { whatis, whatis_matches_t } from '@src/whatis';
+import { whatis, whatis_matches_t } from '@opsimathically/whatis';
 import assert from 'node:assert';
 (async function () {
   // check arbitrary URL

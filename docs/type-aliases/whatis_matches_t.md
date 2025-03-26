@@ -8,7 +8,7 @@
 
 > **whatis\_matches\_t** = `object`
 
-Defined in: whatis.ts:13
+Defined in: [whatis.ts:13](https://github.com/opsimathically/whatis/blob/6175eb94aac6f36cd320ca87155b860b66a89dd5/src/whatis.ts#L13)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in: whatis.ts:13
 
 > **codes**: `any`
 
-Defined in: whatis.ts:14
+Defined in: [whatis.ts:14](https://github.com/opsimathically/whatis/blob/6175eb94aac6f36cd320ca87155b860b66a89dd5/src/whatis.ts#L14)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: whatis.ts:14
 
 > **matched**: [`type_code_info_t`](type_code_info_t.md)[]
 
-Defined in: whatis.ts:16
+Defined in: [whatis.ts:16](https://github.com/opsimathically/whatis/blob/6175eb94aac6f36cd320ca87155b860b66a89dd5/src/whatis.ts#L16)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: whatis.ts:16
 
 > **types**: `any`
 
-Defined in: whatis.ts:15
+Defined in: [whatis.ts:15](https://github.com/opsimathically/whatis/blob/6175eb94aac6f36cd320ca87155b860b66a89dd5/src/whatis.ts#L15)
