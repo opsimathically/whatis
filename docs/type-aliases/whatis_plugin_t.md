@@ -8,7 +8,7 @@
 
 > **whatis\_plugin\_t** = (`params`) => `any`
 
-Defined in: [whatis.ts:93](https://github.com/opsimathically/whatis/blob/6175eb94aac6f36cd320ca87155b860b66a89dd5/src/whatis.ts#L93)
+Defined in: [whatis.ts:99](https://github.com/opsimathically/whatis/blob/978d5157093d9f9ca5fdd621c2f4a02faafb785c/src/whatis.ts#L99)
 
 ## Parameters
 

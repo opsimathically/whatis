@@ -13,6 +13,7 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 type whatis_matches_t = {
   codes: any;
   types: any;
+  metadata?: any;
   matched: type_code_info_t[];
 };
 
@@ -87,6 +88,11 @@ function addToMatchSet(match_set: any, match_info: type_code_info_t) {
     match_set.codes[match_info.code] = true;
   if (!match_set.types[match_info.type])
     match_set.types[match_info.type] = true;
+
+  if (!match_set.metadata) match_set.metadata = {};
+
+  if (match_info.metadata)
+    Object.assign(match_set.metadata, match_info.metadata);
   match_set.matched.push(match_info);
 }
 

@@ -8,7 +8,7 @@
 
 > **whatis**(`param`, `plugins`?): [`whatis_matches_t`](../type-aliases/whatis_matches_t.md)
 
-Defined in: [whatis.ts:103](https://github.com/opsimathically/whatis/blob/6175eb94aac6f36cd320ca87155b860b66a89dd5/src/whatis.ts#L103)
+Defined in: [whatis.ts:109](https://github.com/opsimathically/whatis/blob/978d5157093d9f9ca5fdd621c2f4a02faafb785c/src/whatis.ts#L109)
 
 what is param?  Lets try to find out
 
