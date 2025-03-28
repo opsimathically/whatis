@@ -1,6 +1,6 @@
 {
   "name": "@opsimathically/whatis",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provide a value and this function will do its best to return information on what that value is (object, array, socket, async function, outstanding promise, string, number, etc etc etc).",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
