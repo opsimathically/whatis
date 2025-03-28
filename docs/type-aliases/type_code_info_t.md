@@ -8,7 +8,7 @@
 
 > **type\_code\_info\_t** = `object`
 
-Defined in: [whatis.ts:20](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L20)
+Defined in: [whatis.ts:20](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L20)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in: [whatis.ts:20](https://github.com/opsimathically/whatis/blob/f701144
 
 > **code**: `string`
 
-Defined in: [whatis.ts:21](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L21)
+Defined in: [whatis.ts:21](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L21)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [whatis.ts:21](https://github.com/opsimathically/whatis/blob/f701144
 
 > **description**: `string`
 
-Defined in: [whatis.ts:23](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L23)
+Defined in: [whatis.ts:23](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L23)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [whatis.ts:23](https://github.com/opsimathically/whatis/blob/f701144
 
 > `optional` **metadata**: `Record`\<`string`, `unknown`\>
 
-Defined in: [whatis.ts:24](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L24)
+Defined in: [whatis.ts:24](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L24)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [whatis.ts:24](https://github.com/opsimathically/whatis/blob/f701144
 
 > **type**: `string`
 
-Defined in: [whatis.ts:22](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L22)
+Defined in: [whatis.ts:22](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L22)

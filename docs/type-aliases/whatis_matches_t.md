@@ -8,7 +8,7 @@
 
 > **whatis\_matches\_t** = `object`
 
-Defined in: [whatis.ts:13](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L13)
+Defined in: [whatis.ts:13](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L13)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in: [whatis.ts:13](https://github.com/opsimathically/whatis/blob/f701144
 
 > **codes**: `any`
 
-Defined in: [whatis.ts:14](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L14)
+Defined in: [whatis.ts:14](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L14)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [whatis.ts:14](https://github.com/opsimathically/whatis/blob/f701144
 
 > **matched**: [`type_code_info_t`](type_code_info_t.md)[]
 
-Defined in: [whatis.ts:17](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L17)
+Defined in: [whatis.ts:17](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L17)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [whatis.ts:17](https://github.com/opsimathically/whatis/blob/f701144
 
 > `optional` **metadata**: `any`
 
-Defined in: [whatis.ts:16](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L16)
+Defined in: [whatis.ts:16](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L16)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [whatis.ts:16](https://github.com/opsimathically/whatis/blob/f701144
 
 > **types**: `any`
 
-Defined in: [whatis.ts:15](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L15)
+Defined in: [whatis.ts:15](https://github.com/opsimathically/whatis/blob/8c80393303dd724ec617a679f6cee808cdb12100/src/whatis.ts#L15)
