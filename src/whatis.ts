@@ -80,6 +80,11 @@ const whatis_type_list: string[] = [
   'object'
 ];
 
+type add_match_set_func_t = (
+  match_set: any,
+  match_info: type_code_info_t
+) => void;
+
 /**
  * simply adds a match to the match set
  */
@@ -100,13 +105,18 @@ type whatis_plugin_t = (params: {
   value: any;
   matchset: whatis_matches_t;
   addToMatchSet: (match_set: any, match_info: type_code_info_t) => void;
+  extra?: unknown;
 }) => any;
 
 /**
  * what is param?  Lets try to find out
  */
 
-function whatis(param: unknown, plugins?: whatis_plugin_t[]): whatis_matches_t {
+function whatis(
+  param: unknown,
+  plugins?: whatis_plugin_t[],
+  extra?: unknown
+): whatis_matches_t {
   const whatis_matches = {
     codes: {},
     types: {},
@@ -534,7 +544,8 @@ function whatis(param: unknown, plugins?: whatis_plugin_t[]): whatis_matches_t {
       plugins[idx]({
         value: param,
         matchset: whatis_matches,
-        addToMatchSet: addToMatchSet
+        addToMatchSet: addToMatchSet,
+        extra: extra
       });
     }
   }
@@ -549,5 +560,6 @@ export {
   whatis_matches_t,
   whatis_plugin_t,
   whatis_code_list,
-  whatis_type_list
+  whatis_type_list,
+  add_match_set_func_t
 };

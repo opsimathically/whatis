@@ -1,6 +1,6 @@
 {
   "name": "@opsimathically/whatis",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provide a value and this function will do its best to return information on what that value is (object, array, socket, async function, outstanding promise, string, number, etc etc etc).",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -8,6 +8,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "ts-node -r tsconfig-paths/register test/whatis.test.ts",
+    "example": "ts-node -r tsconfig-paths/register example/whatis.example.ts",
     "docs": "typedoc"
   },
   "keywords": [

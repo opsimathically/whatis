@@ -10,8 +10,7 @@ import { spawn } from 'child_process';
 import EventEmitter from 'node:events';
 
 import util from 'node:util';
-import { whatis } from '@src/whatis';
-import { whatis_matches_t } from '@src/whatis';
+import { whatis, whatis_matches_t, add_match_set_func_t } from '@src/whatis';
 
 (async function () {
   test('whatis null', async function () {
@@ -233,8 +232,12 @@ import { whatis_matches_t } from '@src/whatis';
     const plugin = function (params: {
       value: any;
       matchset: whatis_matches_t;
-      addToMatchSet: any;
+      addToMatchSet: add_match_set_func_t;
+      extra?: unknown;
     }) {
+      if ((params.extra as { somedata: string }).somedata !== 'hello')
+        assert.fail('extra data passthrough failed.');
+
       if (!params.matchset.codes.object) return;
       params.addToMatchSet(params.matchset, {
         code: 'moo_cow_object',
@@ -246,7 +249,8 @@ import { whatis_matches_t } from '@src/whatis';
     const this_plugin_does_not_trigger = function (params: {
       value: any;
       matchset: whatis_matches_t;
-      addToMatchSet: any;
+      addToMatchSet: add_match_set_func_t;
+      extra?: unknown;
     }) {
       if (params.matchset.codes.object) return;
       params.addToMatchSet(params.matchset, {
@@ -257,10 +261,11 @@ import { whatis_matches_t } from '@src/whatis';
     };
 
     // run with plugins
-    const whatis_with_plugin_custom_code_result = whatis(test_obj, [
-      plugin,
-      this_plugin_does_not_trigger
-    ]);
+    const whatis_with_plugin_custom_code_result = whatis(
+      test_obj,
+      [plugin, this_plugin_does_not_trigger],
+      { somedata: 'hello' }
+    );
 
     // check custom codes
     assert(whatis_with_plugin_custom_code_result.codes.moo_cow_object);

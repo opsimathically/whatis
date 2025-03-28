@@ -8,4 +8,4 @@
 
 > `const` **whatis\_type\_list**: `string`[]
 
-Defined in: [whatis.ts:72](https://github.com/opsimathically/whatis/blob/978d5157093d9f9ca5fdd621c2f4a02faafb785c/src/whatis.ts#L72)
+Defined in: [whatis.ts:72](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L72)

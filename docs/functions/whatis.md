@@ -6,9 +6,9 @@
 
 # Function: whatis()
 
-> **whatis**(`param`, `plugins`?): [`whatis_matches_t`](../type-aliases/whatis_matches_t.md)
+> **whatis**(`param`, `plugins`?, `extra`?): [`whatis_matches_t`](../type-aliases/whatis_matches_t.md)
 
-Defined in: [whatis.ts:109](https://github.com/opsimathically/whatis/blob/978d5157093d9f9ca5fdd621c2f4a02faafb785c/src/whatis.ts#L109)
+Defined in: [whatis.ts:115](https://github.com/opsimathically/whatis/blob/f70114498531740943e9f833fc04552389ec5dd8/src/whatis.ts#L115)
 
 what is param?  Lets try to find out
 
@@ -21,6 +21,10 @@ what is param?  Lets try to find out
 ### plugins?
 
 [`whatis_plugin_t`](../type-aliases/whatis_plugin_t.md)[]
+
+### extra?
+
+`unknown`
 
 ## Returns
 
