@@ -28,8 +28,10 @@ clone this repo, enter directory, and run `npm install` for dev dependencies, th
 import {
   whatis,
   whatis_matches_t,
-  add_match_set_func_t
+  add_match_set_func_t,
+  whatis_plugin_t
 } from '@opsimathically/whatis';
+
 import assert from 'node:assert';
 (async function () {
   // check arbitrary URL
@@ -82,15 +84,18 @@ import assert from 'node:assert';
   // to the current match set.  A match set is just the current types/codes
   // which have matched to the object.  Plugins run after all default match
   // tests have completed at the end of whatis().
-  const plugin = function (params: {
+  type some_whatever_type_t = { some_extra_data: string };
+
+  const plugin: whatis_plugin_t<some_whatever_type_t> = function (params: {
     value: any;
     matchset: whatis_matches_t;
     addToMatchSet: add_match_set_func_t;
-    extra?: unknown;
+    extra?: some_whatever_type_t;
   }) {
     // gather, set type of, and use, extra data if relevant
-    const extra_data = params.extra as { some_extra_data: string };
-    if (extra_data.some_extra_data !== 'hi!') return;
+    if (params.extra) {
+      if (params.extra.some_extra_data !== 'hi!') return;
+    }
 
     if (!params.matchset.codes.object) return;
     if (params.value?.hello === 'there')
@@ -109,6 +114,10 @@ import assert from 'node:assert';
 
   // the custom code from the plugin will be set
   assert(some_object_whatis.codes.hello_there_object);
+
+  console.log(
+    "Example finished!  Look at whatis.example.ts to see what's going on."
+  );
 })();
 ```
 

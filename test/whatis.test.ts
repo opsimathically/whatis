@@ -10,7 +10,12 @@ import { spawn } from 'child_process';
 import EventEmitter from 'node:events';
 
 import util from 'node:util';
-import { whatis, whatis_matches_t, add_match_set_func_t } from '@src/whatis';
+import {
+  whatis,
+  whatis_matches_t,
+  add_match_set_func_t,
+  whatis_plugin_t
+} from '@src/whatis';
 
 (async function () {
   test('whatis null', async function () {
@@ -229,13 +234,15 @@ import { whatis, whatis_matches_t, add_match_set_func_t } from '@src/whatis';
       drink: 'milk'
     };
 
-    const plugin = function (params: {
+    type some_extra_t = { somedata: string };
+
+    const plugin: whatis_plugin_t<some_extra_t> = function (params: {
       value: any;
       matchset: whatis_matches_t;
       addToMatchSet: add_match_set_func_t;
-      extra?: unknown;
+      extra?: some_extra_t;
     }) {
-      if ((params.extra as { somedata: string }).somedata !== 'hello')
+      if (params.extra?.somedata !== 'hello')
         assert.fail('extra data passthrough failed.');
 
       if (!params.matchset.codes.object) return;

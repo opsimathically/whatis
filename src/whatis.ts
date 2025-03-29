@@ -101,21 +101,20 @@ function addToMatchSet(match_set: any, match_info: type_code_info_t) {
   match_set.matched.push(match_info);
 }
 
-type whatis_plugin_t = (params: {
+type whatis_plugin_t<extra_t = unknown> = (params: {
   value: any;
   matchset: whatis_matches_t;
   addToMatchSet: (match_set: any, match_info: type_code_info_t) => void;
-  extra?: unknown;
+  extra?: extra_t;
 }) => any;
 
 /**
- * what is param?  Lets try to find out
+ * what is param?  Lets try to find out.
  */
-
 function whatis(
   param: unknown,
-  plugins?: whatis_plugin_t[],
-  extra?: unknown
+  plugins?: whatis_plugin_t<any>[],
+  extra?: any
 ): whatis_matches_t {
   const whatis_matches = {
     codes: {},
